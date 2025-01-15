@@ -17,7 +17,7 @@ function validateForm(event) {
     const alamat = document.getElementById('alamat').value.trim();
 
     if (!nama) { document.getElementById('nama-error').style.display = 'block'; isValid = false; }
-    if (!umur || umur < 18 || umur > 100) { document.getElementById('umur-error').style.display = 'block'; isValid = false; }
+    if (!umur || umur < 16 || umur > 60) { document.getElementById('umur-error').style.display = 'block'; isValid = false; }
     if (!jenisKelamin) { document.getElementById('jenisKelamin-error').style.display = 'block'; isValid = false; }
     if (!agama) { document.getElementById('agama-error').style.display = 'block'; isValid = false; }
     if (hobi.length === 0) { document.getElementById('hobi-error').style.display = 'block'; isValid = false; }

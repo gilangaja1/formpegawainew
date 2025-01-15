@@ -12,22 +12,23 @@
         <form id="employeeForm" onsubmit="return validateForm(event)">
             <div class="form-group">
                 <label for="nama">Nama:</label>
-                <input type="text" id="nama" name="nama" required>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
                 <div class="error" id="nama-error">Nama harus diisi</div>
             </div>
 
             <div class="form-group">
                 <label for="umur">Umur:</label>
-                <input type="number" id="umur" name="umur" min="18" max="100" required>
+                <input type="number" id="umur" name="umur" min="18" max="100" placeholder="Masukkan umur Anda" required>
                 <div class="error" id="umur-error">Umur harus antara 18-100 tahun</div>
             </div>
 
             <div class="form-group">
                 <label for="jenis_kelamin">Jenis Kelamin:</label>
-                <select id="jenis_kelamin">
-                <option value="laki-laki">Laki-laki</option>
-                <option value="perempuan">Perempuan</option>
-                <option value="custom">Custom</option>
+                <select id="jenis_kelamin" required>
+                    <option value="" disabled selected>Isi jenis kelamin Anda</option>
+                    <option value="laki-laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                    <option value="custom">Custom</option>
                 </select>
                 <div class="error" id="jenisKelamin-error">Pilih jenis kelamin</div>
             </div>
@@ -96,7 +97,7 @@
 
             <div class="form-group">
                 <label for="alamat">Alamat:</label>
-                <textarea id="alamat" name="alamat" required></textarea>
+                <textarea id="alamat" name="alamat" placeholder="Masukkan alamat lengkap" required></textarea>
                 <div class="error" id="alamat-error">Alamat harus diisi</div>
             </div>
 
