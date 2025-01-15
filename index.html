@@ -12,14 +12,14 @@
         <form id="employeeForm" onsubmit="return validateForm(event)">
             <div class="form-group">
                 <label for="nama">Nama:</label>
-                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" pattern="[A-Za-z\s]+" title="Nama hanya boleh berisi huruf dan spasi" required>
                 <div class="error" id="nama-error">Nama harus diisi</div>
             </div>
 
             <div class="form-group">
                 <label for="umur">Umur:</label>
-                <input type="number" id="umur" name="umur" min="18" max="100" placeholder="Masukkan umur Anda" required>
-                <div class="error" id="umur-error">Umur harus antara 18-100 tahun</div>
+                <input type="number" id="umur" name="umur" min="18" max="60" placeholder="Masukkan umur Anda, Minimal 18 tahun" required>
+                <div class="error" id="umur-error">Umur harus antara 16-60 tahun</div>
             </div>
 
             <div class="form-group">
