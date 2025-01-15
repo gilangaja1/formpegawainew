@@ -1,0 +1,44 @@
+.result-display {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(120deg, #ffffff, #eaf6fc);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1em;
+}
+.result-item:last-child {
+    border-bottom: none;
+}
+.result-item label {
+    font-weight: bold;
+    color: #4a90e2;
+}
+.result-value {
+    color: #333;
+}
+.button-group {
+    text-align: center;
+    margin-top: 30px;
+}
+.button-group button {
+    padding: 10px 25px;
+    font-size: 1em;
+    color: white;
+    background: linear-gradient(120deg, #4a90e2, #357ab7);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.button-group button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

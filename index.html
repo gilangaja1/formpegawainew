@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pegawai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Pegawai</h1>
+        <form id="employeeForm" onsubmit="return validateForm(event)">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+                <div class="error" id="nama-error">Nama harus diisi</div>
+            </div>
+
+            <div class="form-group">
+                <label for="umur">Umur:</label>
+                <input type="number" id="umur" name="umur" min="18" max="100" required>
+                <div class="error" id="umur-error">Umur harus antara 18-100 tahun</div>
+            </div>
+
+            <div class="form-group">
+                <label for="jenis_kelamin">Jenis Kelamin:</label>
+                <select id="jenis_kelamin">
+                <option value="laki-laki">Laki-laki</option>
+                <option value="perempuan">Perempuan</option>
+                <option value="custom">Custom</option>
+                </select>
+                <div class="error" id="jenisKelamin-error">Pilih jenis kelamin</div>
+            </div>
+
+            <div class="form-group">
+                <label>Agama:</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="hindu" name="agama" value="hindu" required>
+                        <label for="hindu">Hindu</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="islam" name="agama" value="islam">
+                        <label for="islam">Islam</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="katolik" name="agama" value="katolik">
+                        <label for="katolik">Katolik</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="kristen" name="agama" value="kristen">
+                        <label for="kristen">Kristen Protestan</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="buddha" name="agama" value="buddha">
+                        <label for="buddha">Buddha</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="konghucu" name="agama" value="konghucu">
+                        <label for="konghucu">Konghucu</label>
+                    </div>
+                </div>
+                <div class="error" id="agama-error">Pilih agama</div>
+            </div>
+
+            <div class="form-group">
+                <label>Hobi:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="sepakbola" name="hobi" value="sepakbola">
+                        <label for="sepakbola">Sepak Bola</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lari" name="hobi" value="lari">
+                        <label for="lari">Lari</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="mancing" name="hobi" value="mancing">
+                        <label for="mancing">Mancing Ikan</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="riding" name="hobi" value="riding">
+                        <label for="riding">Riding</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="basket" name="hobi" value="basket">
+                        <label for="basket">Basket</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="bulutangkis" name="hobi" value="bulutangkis">
+                        <label for="bulutangkis">Bulu Tangkis</label>
+                    </div>
+                </div>
+                <div class="error" id="hobi-error">Pilih minimal satu hobi</div>
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" required></textarea>
+                <div class="error" id="alamat-error">Alamat harus diisi</div>
+            </div>
+
+            <div class="button-group">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
